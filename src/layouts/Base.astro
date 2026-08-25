@@ -99,6 +99,16 @@ const { title = "Mona's Bookmark Manager App" } = Astro.props;
       }
       button:hover { filter: brightness(1.05); }
       .hint { margin: 0 0 1.5rem; font-size: 0.8rem; color: var(--muted); }
+      .error {
+        margin: 0 0 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #b91c1c;
+        background: color-mix(in srgb, #ef4444 12%, transparent);
+        border: 1px solid color-mix(in srgb, #ef4444 40%, transparent);
+        border-radius: var(--radius);
+      }
 
       #list-header {
         display: flex;
@@ -129,6 +139,11 @@ const { title = "Mona's Bookmark Manager App" } = Astro.props;
         border-radius: var(--radius);
       }
       .bookmark .url { flex: 1 1 12rem; overflow-wrap: anywhere; }
+      .bookmark .sep {
+        color: var(--muted);
+        font-weight: 600;
+        white-space: pre;
+      }
       .bookmark .slug {
         font-family: ui-monospace, "SF Mono", monospace;
         font-size: 0.85rem;
